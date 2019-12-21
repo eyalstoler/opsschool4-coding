@@ -27,7 +27,7 @@ def weather_in(city):
             print('The weather in {} today is {} degrees'.format(city, temperature))
 
         except KeyError as city_error:
-            print('{} does not exist, maybe try Tel-Aviv or Bacon'.format(city))
+            print('{} does not exist, try Bigfoot or Bacon'.format(city))
 
 
 def main(cities):
