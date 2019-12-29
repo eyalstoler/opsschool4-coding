@@ -24,10 +24,12 @@ def weather_in(city):
 
             celsius = json_data['current']['temperature']
             temperature = (celsius*1.8)+32 if fahrenheit else celsius
-            print('The weather in {} today is {} degrees'.format(city, temperature))
+            scale = 'Fahrenheit' if fahrenheit else 'Celsius'
+
+            print('The weather in {} today is {} degrees {}'.format(city, temperature, scale))
 
         except KeyError as city_error:
-            print('{} does not exist, try Bigfoot or Bacon'.format(city))
+            print('{} does not exist, maybe try Bigfoot or Bacon'.format(city))
 
 
 def main(cities):
